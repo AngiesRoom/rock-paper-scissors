@@ -38,12 +38,13 @@ function playRound(humanChoice, computerChoice){
             console.log("You win Paper beats Rock");
             humanScore += 1;
         }
-    }else if(humanChoice == 'rock'){
+    }else if(humanChoice == 'scissors'){
         if(computerChoice == 'paper'){
-            console.log("You lose Paper beats Rock");
+            console.log("You lose win Scissors beats Paper");
             computerScore += 1;
         }else{
             console.log("You win Rock beats Scissors");
+            humanScore += 1;
         }
     }
 }
