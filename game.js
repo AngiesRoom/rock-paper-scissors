@@ -19,6 +19,24 @@ function getHumanChoice(){
 let humanScore = 0;
 let computerScore = 0;
 
+const rock = document.querySelector('.rock')
+rock.addEventListener('click', (e) => {
+    playRound('rock', getComputerChoice())
+})
+
+
+const paper = document.querySelector('.paper')
+paper.addEventListener("click", (e) => {
+    playRound('paper', getComputerChoice())
+})
+
+const scissors = document.querySelector('.scissors')
+scissors.addEventListener('click', (e) => {
+    playRound('scissors', getComputerChoice())
+})
+
+
+
 function playRound(humanChoice, computerChoice){
     if(humanChoice == computerChoice){
         console.log("The game is a draw no one wins");
@@ -50,23 +68,3 @@ function playRound(humanChoice, computerChoice){
 }
 
 
-
-
-function playGame(){
-    for(let i =1; i <=5; i++){
-        const computerSelection = getComputerChoice();
-        const humanSelection = getHumanChoice();
-        playRound(humanSelection, computerSelection);
-    }
-    console.log(humanScore);
-    console.log(computerScore);
-    if(humanScore > computerScore){
-        console.log("You win!!")
-    }else if(humanScore < computerScore){
-        console.log("You lose");
-    }else{
-        console.log("The game was a tie")
-    }
-}
-
-playGame();
