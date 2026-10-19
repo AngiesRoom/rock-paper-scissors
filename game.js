@@ -52,6 +52,7 @@ function playRound(humanChoice, computerChoice){
             if(computerChoice == 'scissors'){
                 result.textContent = `You win Rock beats Scissors`
                 checkScore(humanScore, computerScore)
+                humanScore += 1;
             }else if(computerChoice == 'paper'){
                 result.textContent = "You lose Paper beats Rock"
                 computerScore += 1;
